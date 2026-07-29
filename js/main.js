@@ -1,15 +1,18 @@
 let indiceAtual = 0;
 const totalSlides = 2;
 const slide = document.getElementById("slide");
-const botaoTema = document.getElementById("theme-toggle");
-const iconeTema = document.getElementById("theme-icon");
 
 function proximoSlide() {
   indiceAtual = (indiceAtual + 1) % totalSlides;
-
+  
   const deslocamento = -indiceAtual * 103;
   slide.style.transform = `translateX(${deslocamento}%)`;
 }
+
+setInterval(proximoSlide, 3000);
+
+const botaoTema = document.getElementById("theme-toggle");
+const iconeTema = document.getElementById("theme-icon");
 
 if (localStorage.getItem("tema") === "escuro") {
   document.body.classList.add("dark");
@@ -29,4 +32,3 @@ botaoTema.addEventListener("click", () => {
   }
 });
 
-setInterval(proximoSlide, 3000);

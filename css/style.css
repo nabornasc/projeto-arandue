@@ -69,7 +69,7 @@ body.dark .slideshow {
   cursor: pointer;
 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  transition: .3s;
+  transition: 1s;
 }
 
 .theme-btn:hover{
