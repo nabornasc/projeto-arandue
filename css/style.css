@@ -1,3 +1,10 @@
+body{
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #0f172a;
+  transition: background-color .3s ease, color .3s ease;
+}
+
 .slideshow{
   margin: 0 auto;
   overflow: hidden;
@@ -55,5 +62,18 @@
 .theme-btn img{
   width: 28px;
   height: 28px;
+}
+
+body.dark{
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+body.dark .theme-btn{
+  background-color: #f59e0b;
+}
+
+body.dark .slideshow{
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
